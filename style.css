@@ -786,7 +786,7 @@ ul {
   flex: none;
   order: 2;
   flex-grow: 0;
-  margin-top: 24px;
+  margin-top: -10px;
   margin-bottom: 24px;
   font-family: 'Inter', serif;
   font-style: normal;
@@ -799,9 +799,8 @@ ul {
 
 .am-btn:hover {
   background-color: #fff;
-  border: 2px solid #ff6b00;
+  border: 10px solid #ff6b00;
   color: black;
-  z-index: 5;
 }
 
 .am-btn:active {
