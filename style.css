@@ -1139,3 +1139,7 @@ ul {
   text-align: center;
   color: #fff;
 }
+
+@media (min-width: 992px) {
+  .headline-section {}
+}
