@@ -712,7 +712,10 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  background: #1c1a19;
+  background: #1c1a19 url('images/Frame.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: 400px;
 }
 
 .about {
@@ -723,12 +726,6 @@ ul {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.aboutbg {
-  position: absolute;
-  left: 57%;
-  top: 60%;
 }
 
 .am-title {
