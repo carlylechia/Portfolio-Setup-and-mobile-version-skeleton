@@ -75,6 +75,10 @@ header {
   margin-bottom: 15px;
 }
 
+.topdesk {
+  display: none;
+}
+
 .headline {
   display: flex;
   position: absolute;
@@ -1152,6 +1156,37 @@ ul {
     margin: 1px;
   }
 
+  .navbar {
+    width: 100vw;
+    position: fixed;
+    z-index: 4;
+  }
+
+  .logo {
+    margin-left: 10vw;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbottom {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+  }
+
+  .topdesk {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -45vw;
+  }
+
+  .headnum {
+    margin-right: 25px;
+  }
+
   .headline {
     width: 100vw;
   }
@@ -1173,10 +1208,39 @@ ul {
   .portfolio {
     width: 100vw;
     margin: 1px;
+    height: 4183px;
+    margin-top: -46px;
   }
 
   .navbar {
     width: 100vw;
+    position: fixed;
+    z-index: 4;
+  }
+
+  .logo {
+    margin-left: 10vw;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbottom {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+  }
+
+  .topdesk {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -65vw;
+  }
+
+  .headnum {
+    margin-right: 25px;
   }
 
   .headline {
@@ -1185,6 +1249,18 @@ ul {
     background-repeat: no-repeat;
     background-position: right;
     background-size: 40%;
+    height: 100vh;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18vh;
+    justify-content: space-between;
+  }
+
+  .box {
+    margin-top: 10px;
   }
 
   .content {
@@ -1211,13 +1287,21 @@ ul {
 
   .info {
     width: 100vw;
+    height: 1600px;
+    margin-top: -2000px;
+    margin-bottom: -1800px;
+    background: #1c1a19 url('images/Group.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 205px;
   }
 
   .title {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-left: -200px;
+    margin-left: -230px;
+    margin-top: 55px;
   }
 
   .line {
@@ -1261,6 +1345,7 @@ ul {
     flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
+    margin-top: -200px;
   }
 
   .card {
@@ -1273,6 +1358,40 @@ ul {
 
   .fullwidth {
     width: 31vw;
+  }
+
+  .expertise {
+    display: flex;
+    flex-direction: row;
+    height: 710px;
+    margin-bottom: 150px;
+    margin-top: 250px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    padding: 192px 1px;
+    position: absolute;
+    width: 70%;
+    height: 739px;
+    left: 143px;
+    top: 1px;
+  }
+
+  .divider {
+    width: 80vw;
+  }
+
+  .am-description {
+    width: 56vw;
+    display: flex;
+    font-size: 1.2em;
+    margin: 20px 1px;
+  }
+
+  .chialangs {
+    margin-top: -25px;
   }
 }
 
