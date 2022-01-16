@@ -18,12 +18,11 @@ html {
 }
 
 .portfolio {
-  height: 7282px;
+  height: 7874px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 375px;
-  border: 1px solid rosybrown;
   position: relative;
   margin: auto;
 }
@@ -1150,10 +1149,87 @@ ul {
   color: #fff;
 }
 
+.contact-form {
+  position: relative;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 120px 24px;
+  position: absolute;
+  width: 375px;
+  height: 544px;
+  top: 7280px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #999;
+  margin: auto;
+}
+
+legend {
+  position: absolute;
+  top: 20px;
+  width: 327px;
+  height: 216px;
+  margin-top: 40px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 2em;
+}
+
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #999;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+textarea {
+  background: #fbf8f7;
+  width: 64.5vw;
+  border: none;
+  outline: none;
+  margin: 15px auto;
+  font-family: 'Inter', sans-serif;
+  padding: 15px;
+}
+
+.fm-btn {
+  margin: 20px auto;
+  padding-left: 25px;
+}
+
+.footer-links {
+  position: absolute;
+  top: 99.3%;
+  background: #fff;
+  margin-left: 20%;
+}
+
+.foot {
+  color: black;
+}
+
 @media screen and (min-width: 620px) {
   .portfolio {
     width: 100vw;
-    margin: 1px;
+    margin: 0;
   }
 
   .navbar {
@@ -1207,8 +1283,8 @@ ul {
 @media screen and (min-width: 992px) {
   .portfolio {
     width: 100vw;
-    margin: 1px;
-    height: 4183px;
+    margin: 0;
+    height: 4783px;
     margin-top: -46px;
   }
 
@@ -1393,11 +1469,88 @@ ul {
   .chialangs {
     margin-top: -25px;
   }
-}
 
-/* @media screen and (min-width: 1200px) {
-  .portfolio {
-    margin: 1px;
-    width: 100vh;
+  .contactform {
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
   }
-} */
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 24px;
+    position: absolute;
+    top: 700px;
+    left: 41vw;
+    width: 55vw;
+    height: 544px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  legend {
+    width: 32vw;
+    position: absolute;
+    top: 18vh;
+    left: -35vw;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 52px;
+  }
+
+  input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #999;
+    width: 49vw;
+    padding: 10px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  textarea {
+    background: #fbf8f7;
+    margin-bottom: 15px;
+    width: 49vw;
+    height: 15vh;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .fm-btn {
+    margin-left: -1px;
+    padding-left: 30px;
+  }
+
+  .footer-links {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -115%;
+    margin-left: 40vw;
+  }
+
+  .foot {
+    color: black;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100px;
+    border-top: 1px solid grey;
+  }
+}
