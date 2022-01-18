@@ -17,13 +17,15 @@ html {
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .portfolio {
-  height: 7874px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 375px;
-  position: relative;
   margin: auto;
 }
 
@@ -32,46 +34,35 @@ header {
 }
 
 .headline-section {
-  background-image: url('images/Illustration.png');
-  background-position-x: right 320px;
-  background-position-x: left 60.37%;
+  max-width: 100vw;
 }
 
 .navbar {
-  position: absolute;
-  width: 375px;
-  height: 92px;
-  display: flex;
-  background: #3c3a39;
-  z-index: -4;
-}
-
-.navbottom {
+  position: relative;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  position: absolute;
-  width: 351px;
-  top: 44px;
+  background: #3c3a39;
+  z-index: -4;
 }
 
 .logo {
-  position: static;
-  height: 24px;
-  left: 12px;
-  top: 10px;
-  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  font-family: 'Roboto', serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 24px;
-  align-items: center;
   text-align: center;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 15px;
+  margin-left: 25px;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  margin-right: 24px;
 }
 
 .topdesk {
@@ -80,44 +71,35 @@ header {
 
 .headline {
   display: flex;
-  position: absolute;
   flex-direction: column;
   align-items: flex-start;
   padding: 120px 24px;
   height: 690px;
-  width: 375px;
-  top: 92px;
   background: #1c1a19 url('images/Illustration.png');
   background-repeat: no-repeat;
-  background-position: bottom;
   background-position: right;
-  background-position-y: 220px;
+  background-position-y: bottom;
 }
 
 h1 {
   position: static;
-  width: 327px;
-  height: 124px;
-  top: 120px;
+  width: 74vw;
   font-family: 'Crete Round', serif;
   color: #ff6b00;
   font-style: normal;
   font-weight: normal;
-  font-size: 56px;
+  font-size: max(56px, 15vw);
   line-height: 64px;
   letter-spacing: 0.37px;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 12px;
 }
 
 .h3 {
   position: static;
-  width: 327px;
-  height: 27px;
-  left: 24px;
-  top: 256px;
+  width: 80vw;
+  height: 8vh;
   font-family: 'Roboto', sans-serif;
   color: #fff5e1;
   font-style: normal;
@@ -128,14 +110,11 @@ h1 {
   align-items: center;
   flex: none;
   order: 1;
-  margin-top: 12px;
 }
 
 .h5 {
   position: static;
-  width: 327px;
-  left: 24px;
-  top: 295px;
+  width: 80vw;
   font-family: 'Poppins', sans-serif;
   color: #fff;
   font-style: normal;
@@ -144,7 +123,6 @@ h1 {
   line-height: 24px;
   flex: none;
   order: 2;
-  margin-top: 12px;
 }
 
 ul {
@@ -158,8 +136,6 @@ ul {
   align-items: center;
   position: static;
   height: 40px;
-  left: 24px;
-  top: 430px;
   flex: none;
   order: 3;
   margin-top: 12px;
@@ -169,6 +145,11 @@ ul {
 
 .box {
   margin-right: 15px;
+  transition: transform 0.5s ease-out;
+}
+
+.box:hover {
+  transform: scale(1.5) rotate(360deg);
 }
 
 .one {
@@ -207,14 +188,9 @@ ul {
 
 .works {
   display: grid;
-  grid-template-columns: 1fr;
   justify-items: center;
   padding-top: 120px;
   padding-bottom: 120px;
-  position: relative;
-  width: 375px;
-  height: 3455px;
-  top: 782px;
 }
 
 .title {
@@ -225,9 +201,7 @@ ul {
   align-items: center;
   justify-content: center;
   position: static;
-  width: 327px;
-  height: 107px;
-  left: 24px;
+  width: 80vw;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -235,15 +209,12 @@ ul {
 
 .titlewords {
   position: static;
-  width: 327px;
-  height: 83px;
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 10vw;
   line-height: 52px;
-  display: flex;
-  align-items: center;
+  text-align: center;
   color: #1c1a19;
   flex: none;
   margin-top: 24px;
@@ -252,8 +223,7 @@ ul {
 
 .line {
   position: static;
-  width: 327px;
-  top: 107px;
+  width: 80vw;
   border: 1px solid #212121;
   flex: none;
   order: 1;
@@ -267,14 +237,9 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  width: 375px;
-  height: 3028px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-top: 56px;
-  margin-bottom: 80px;
 }
 
 .sample {
@@ -284,8 +249,6 @@ ul {
   padding-left: 24px;
   padding-right: 24px;
   position: static;
-  width: 375px;
-  height: 568px;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -294,57 +257,42 @@ ul {
 }
 
 .intimage {
-  width: 327px;
-  height: 237px;
-  left: 24px;
-  background: url('image_processing20200716-21735-f07s4k.png');
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  max-width: 80vw;
+}
+
+#imagine {
+  width: 80vw;
 }
 
 .underimage {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: static;
-  width: 327px;
-  height: 307px;
-  left: 24px;
-  top: 261px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .postopic {
   position: static;
-  width: 327px;
-  height: 36px;
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 8vw;
   line-height: 44px;
-  display: flex;
-  align-items: center;
   color: #091e42;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  height: 12vh;
 }
 
 .multigraph {
   position: static;
-  width: 327px;
-  height: 147px;
-  top: 48px;
+  width: 80vw;
   font-family: 'Inter', serif;
   font-style: normal;
   font-weight: normal;
@@ -354,102 +302,75 @@ ul {
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 .tags {
   display: flex;
   flex-direction: row;
-  align-items: center;
   position: static;
-  width: 297px;
   height: 40px;
-  top: 207px;
   flex: none;
   order: 2;
   flex-grow: 0;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  margin-left: -12px;
+  margin: 2vh 0;
 }
 
 .tag {
   cursor: pointer;
+  margin-right: 6px;
+  max-height: 40px;
+  max-width: 85px;
 }
 
 .csstag {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 12px;
+  padding: 1.2vw 2vw;
   position: static;
-  width: 49px;
-  height: 40px;
+  width: 12vw;
+  height: 10vw;
   background: #fff;
   border: 1px solid #8993a4;
   box-sizing: border-box;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-left: 12px;
-  margin-right: 12px;
 }
 
 .htag {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 12px;
+  padding: 1.2vw 1.5vw;
   position: static;
-  width: 56px;
-  height: 40px;
-  left: 61px;
+  width: 13vw;
+  height: 10vw;
   background: #fff;
   border: 1px solid #8993a4;
   box-sizing: border-box;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-right: 12px;
-  margin-left: 12px;
 }
 
 .bootag {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 12px;
+  padding: 1.2vw;
   position: static;
-  width: 95px;
-  height: 40px;
-  left: 129px;
+  width: 22.5vw;
+  height: 10vw;
   background: #fff;
   border: 1px solid #8993a4;
   box-sizing: border-box;
   order: 2;
   flex-grow: 0;
-  margin-right: 12px;
-  margin-left: 12px;
 }
 
 .rubytag {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 12px;
+  padding: 1.2vw 1.6vw;
   position: static;
-  width: 61px;
-  height: 40px;
-  left: 236px;
+  width: 15vw;
+  height: 10vw;
   background: #fff;
   border: 1px solid #8993a4;
   box-sizing: border-box;
   flex: none;
   order: 3;
   flex-grow: 0;
-  margin-right: 12px;
-  margin-left: 12px;
 }
 
 .probtn {
@@ -462,14 +383,10 @@ ul {
   position: static;
   width: 124px;
   height: 48px;
-  top: 259px;
-  margin-top: 12px;
-  margin-bottom: 12px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 17px;
   line-height: 24px;
-  align-items: center;
   text-align: center;
   color: #fff;
   flex: none;
@@ -496,99 +413,25 @@ ul {
   padding-left: 24px;
   padding-right: 24px;
   position: static;
-  width: 375px;
-  height: 2436px;
-  top: 592px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-}
-
-.card1 {
   position: relative;
-  width: 327px;
-  height: 386px;
-  top: 70px;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.card2 {
-  position: relative;
-  width: 327px;
-  height: 386px;
-  top: 70px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.card3 {
-  position: relative;
-  width: 327px;
-  height: 386px;
-  top: 70px;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.card4 {
-  position: relative;
-  width: 327px;
-  height: 386px;
-  top: 70px;
-  flex: none;
-  order: 3;
-  flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.card5 {
-  position: relative;
-  width: 327px;
-  height: 386px;
-  top: 70px;
-  flex: none;
-  order: 3;
-  flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.card6 {
-  position: relative;
-  width: 327px;
-  height: 386px;
-  top: 70px;
-  flex: none;
-  order: 3;
-  flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .card-background {
-  position: relative;
-  width: 327px;
+  width: 80vw;
   height: 386px;
-  left: 1px;
-  top: 1px;
+  min-width: 200px;
+  left: 0;
+  top: 0;
 }
 
 .img-placeholder {
@@ -613,49 +456,51 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 8px 16px;
+  padding-top: 8vw;
   position: absolute;
-  top: 50px;
-  width: 327px;
-  height: 248px;
-  left: calc(50% - 327px / 2);
+  top: 10vw;
+  left: 8vw;
+  height: 62vw;
   bottom: 62px;
+  width: 70vw;
+  min-width: 216px;
 }
 
 .cardtitle {
   position: static;
-  width: 295px;
-  height: 81px;
-  left: 16px;
-  top: 8px;
+  width: 70vw;
+  height: 10vw;
+  max-height: 80px;
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
-  line-height: 44px;
+  font-size: max(24px, 6vw);
+  line-height: 7vw;
   color: #fff;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+.cardagraph {
+  height: 28vw;
+  max-height: 90px;
+  width: 65vw;
 }
 
 .cp-text {
   font-family: 'Inter', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: (12px, 3.5vw);
+  line-height: 5vw;
   color: #fff;
   flex: none;
   order: 1;
   flex-grow: 0;
   position: static;
-  width: 295px;
-  height: 87px;
-  left: 16px;
-  top: 101px;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -665,25 +510,20 @@ ul {
 }
 
 .fullwidth {
-  width: 328px;
+  width: 80vw;
   height: 48px;
   display: flex;
   position: absolute;
-  left: 1px;
-  right: 1px;
-  bottom: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #ff6b00;
 }
 
 .cardtags {
   display: flex;
   flex-direction: row;
-  align-items: center;
   position: static;
-  width: 236px;
-  height: 40px;
-  left: 16px;
-  top: 200px;
   flex: none;
   order: 2;
   flex-grow: 0;
@@ -713,30 +553,28 @@ ul {
   color: #fff;
   flex: none;
   cursor: pointer;
+  transition: transform 0.5s ease-in-out;
 }
 
 .probtn1:hover {
   background: black;
+  transform: scale(1.2);
 }
 
 .info {
-  height: 2700px;
-  position: absolute;
-  top: 4580px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   background: #1c1a19 url('images/Frame.png');
   background-repeat: no-repeat;
   background-position: right;
-  background-position-y: 400px;
+  background-position-y: 475px;
 }
 
 .about {
   grid-row: 1 / 2;
-  height: 665px;
-  width: 375px;
-  padding: 120px 24px;
+  height: 740px;
+  padding: 150px 24px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -744,10 +582,6 @@ ul {
 
 .am-title {
   position: static;
-  width: 327px;
-  height: 79px;
-  left: 24px;
-  top: 120px;
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: normal;
@@ -759,15 +593,11 @@ ul {
   order: 0;
   flex-grow: 0;
   margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .am-description {
   position: static;
-  width: 327px;
-  height: 148px;
-  left: 24px;
-  top: 223px;
+  width: 80vw;
   font-family: 'Inter', serif;
   font-style: normal;
   font-weight: normal;
@@ -778,19 +608,14 @@ ul {
   order: 1;
   flex-grow: 0;
   margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 35px;
 }
 
 .am-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: 12px;
   position: static;
   width: 161px;
   height: 48px;
-  left: 24px;
-  top: 395px;
   background: #ff6b00;
   border: 1px solid #ff6b00;
   flex: none;
@@ -805,11 +630,12 @@ ul {
   line-height: 24px;
   color: #fff;
   cursor: pointer;
+  transition: transform 0.5s ease-out;
 }
 
 .am-btn:hover {
-  background-color: #ff6b00;
-  border: 10px solid #ff6b00;
+  background-color: silver;
+  transform: scale(1.2);
   color: black;
 }
 
@@ -825,16 +651,15 @@ ul {
 
 .divider {
   position: absolute;
+  bottom: 0;
   height: 1px;
-  width: 350px;
-  left: 25px;
-  top: 100%;
+  width: 90vw;
   background: #fff;
 }
 
 .expertise {
   grid-row: 2 / span 2;
-  height: 2000px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -892,14 +717,14 @@ ul {
 }
 
 .chialangs {
-  position: relative;
-  width: 225.46px;
-  height: 281.46px;
+  position: absolute;
+  top: 100px;
   flex: none;
   order: 0;
   flex-grow: 0;
   margin-bottom: 24px;
   margin-top: 24px;
+  margin-left: 20vw;
 }
 
 .langnames {
@@ -941,15 +766,14 @@ ul {
 }
 
 .chiaframes {
-  position: relative;
-  width: 281px;
-  height: 336px;
-  left: 24px;
+  position: absolute;
+  top: 450px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-top: 24px;
+  margin-top: 50px;
   margin-bottom: 24px;
+  margin-left: 10vw;
 }
 
 .square {
@@ -976,9 +800,6 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 8px 12px;
-  width: 281px;
-  height: 40px;
   flex: none;
   flex-grow: 0;
   margin-bottom: 24px;
@@ -987,10 +808,6 @@ ul {
 
 .frametext {
   position: static;
-  width: 227px;
-  height: 24px;
-  left: 42px;
-  top: 8px;
   font-family: 'InaiMathi', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -1008,17 +825,9 @@ ul {
   justify-content: space-around;
   align-items: center;
   padding: 12px;
-  position: static;
-  width: 186px;
-  height: 272px;
-  left: 47.5px;
-  top: 64px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-left: 34px;
-  margin-bottom: 24px;
-  margin-top: 24px;
 }
 
 .fram {
@@ -1028,14 +837,9 @@ ul {
   padding-top: 12px;
   padding-bottom: 12px;
   position: static;
-  width: 162px;
-  height: 48px;
-  left: 12px;
-  top: 56px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 8px;
   font-family: 'InaiMathi', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1046,15 +850,13 @@ ul {
 }
 
 .chiaskills {
-  position: relative;
-  width: 169px;
-  height: 336px;
-  left: 24px;
+  position: absolute;
+  top: 900px;
   flex: none;
   order: 2;
   flex-grow: 0;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-left: 55vw;
+  margin-top: 50px;
 }
 
 .circle {
@@ -1149,7 +951,7 @@ ul {
   color: #fff;
 }
 
-.contact-form {
+.contactform {
   position: relative;
 }
 
@@ -1159,20 +961,17 @@ fieldset {
   align-items: flex-start;
   padding: 120px 24px;
   position: absolute;
-  width: 375px;
   height: 544px;
-  top: 7280px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #999;
-  margin: auto;
+  width: 100vw;
 }
 
 legend {
   position: absolute;
   top: 20px;
-  width: 327px;
   height: 216px;
   margin-top: 40px;
   font-family: Inter;
@@ -1194,32 +993,44 @@ input {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #999;
-  width: 100%;
   padding: 10px;
   outline: none;
   font-family: 'Inter', sans-serif;
+  width: 80vw;
 }
 
 textarea {
   background: #fbf8f7;
-  width: 64.5vw;
   border: none;
   outline: none;
-  margin: 15px auto;
   font-family: 'Inter', sans-serif;
   padding: 15px;
+  width: 80vw;
 }
 
 .fm-btn {
-  margin: 20px auto;
+  margin: 20px 44vw;
   padding-left: 25px;
+}
+
+.footer {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  width: 100vw;
+  height: 250px;
 }
 
 .footer-links {
   position: absolute;
   top: 99.3%;
   background: #fff;
-  margin-left: 20%;
+  margin: auto;
+  height: 100px;
+  width: 100vw;
+  border-top: 1px solid #555;
+  display: flex;
+  justify-content: center;
 }
 
 .foot {
@@ -1263,10 +1074,6 @@ textarea {
     margin-right: 25px;
   }
 
-  .headline {
-    width: 100vw;
-  }
-
   .navbar {
     width: 100vw;
   }
@@ -1284,39 +1091,43 @@ textarea {
   .portfolio {
     width: 100vw;
     margin: 0;
-    height: 4783px;
-    margin-top: -46px;
   }
 
   .navbar {
     width: 100vw;
     position: fixed;
+    top: 0;
     z-index: 4;
   }
 
   .logo {
     margin-left: 10vw;
+    transition: transform 0.5s ease-out;
+  }
+
+  .logo:hover {
+    transform: scale(1.3) rotate(360deg);
+    color: black;
   }
 
   .menu {
     display: none;
   }
 
-  .navbottom {
-    position: fixed;
-    top: 0;
-    z-index: 4;
-  }
-
   .topdesk {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    margin-right: -65vw;
+    margin-left: 70vw;
   }
 
   .headnum {
     margin-right: 25px;
+    transition: transform 0.5s ease-out;
+  }
+
+  .headnum:hover {
+    transform: scale(1.3);
   }
 
   .headline {
@@ -1426,6 +1237,11 @@ textarea {
 
   .card {
     width: 32vw;
+    transition: transform 0.5s ease-out;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card-background {
