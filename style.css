@@ -2116,6 +2116,7 @@ body {
     justify-content: space-between;
     position: absolute;
     top: 37vh;
+    left: 10px;
   }
 
   .box {
@@ -2207,7 +2208,7 @@ body {
 
   .works {
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 10% 90%;
   }
 
   .intro {
@@ -3045,5 +3046,4 @@ body {
   .foot {
     color: black;
   }
-}
 }
