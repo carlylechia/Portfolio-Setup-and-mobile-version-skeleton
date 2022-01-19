@@ -458,10 +458,8 @@ body {
   .card-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-top: 8vw;
+    justify-content: space-evenly;
     position: absolute;
-    top: 10vw;
     left: 8vw;
     height: 62vw;
     bottom: 62px;
@@ -477,13 +475,13 @@ body {
     font-family: 'Crete Round', serif;
     font-style: normal;
     font-weight: normal;
-    font-size: max(24px, 6vw);
+    font-size: 6vw;
     line-height: 7vw;
     color: #fff;
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin-top: 2vw;
+    margin-top: 5vw;
     margin-bottom: 3vw;
   }
 
@@ -497,7 +495,7 @@ body {
     font-family: 'Inter', serif;
     font-style: normal;
     font-weight: normal;
-    font-size: (12px, 3.5vw);
+    font-size: 3.5vw;
     line-height: 5vw;
     color: #fff;
     flex: none;
@@ -514,6 +512,7 @@ body {
 
   .fullwidth {
     width: 80vw;
+    min-width: 200px;
     height: 48px;
     display: flex;
     position: absolute;
@@ -727,7 +726,7 @@ body {
     flex-grow: 0;
     margin-bottom: 24px;
     margin-top: 24px;
-    margin-left: 20vw;
+    margin-left: 15vw;
   }
 
   .langnames {
@@ -776,7 +775,7 @@ body {
     flex-grow: 0;
     margin-top: 50px;
     margin-bottom: 24px;
-    margin-left: 10vw;
+    margin-left: 8vw;
   }
 
   .square {
@@ -858,7 +857,7 @@ body {
     flex: none;
     order: 2;
     flex-grow: 0;
-    margin-left: 55vw;
+    margin-left: 42vw;
     margin-top: 50px;
   }
 
@@ -1093,7 +1092,7 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  .portfolio {
+  /* .portfolio {
     width: 100vw;
     margin: 0;
   }
@@ -1174,7 +1173,7 @@ body {
   }
 
   .works {
-    /* width: 100vw; */
+  
   }
 
   .info {
