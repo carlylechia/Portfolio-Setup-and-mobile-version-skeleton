@@ -3012,13 +3012,13 @@ body {
     margin-left: 5vw;
   }
 
-  .contactform fieldset legend h3 {
+  #legendtext {
     transition: transform 0.5s ease-out;
+    cursor: pointer;
   }
 
-  .contactform fieldset legend h3:hover {
-    cursor: pointer;
-    transform: translateX(50px);
+  #legendtext:hover {
+    transform: translate(50px, 50px);
   }
 
   form ul {
