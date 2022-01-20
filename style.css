@@ -3012,6 +3012,15 @@ body {
     margin-left: 5vw;
   }
 
+  .contactform fieldset legend h3 {
+    transition: transform 0.5s ease-out;
+  }
+
+  .contactform fieldset legend h3:hover {
+    cursor: pointer;
+    transform: translateX(50px);
+  }
+
   form ul {
     list-style: none;
   }
